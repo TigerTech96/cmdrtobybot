@@ -11,8 +11,7 @@ from discord import *
 from discord.ext import commands, tasks
 from itertools import cycle
 from pichart import geese
-# all stage 1 events are in this file, extensions are located in the /cogs folder, go to the load / unload commands in this file to see how to pop those in and out
-#test test test
+# all stage 1 events are in this file, extensions are where functions are called from
 
 
 logger = logging.getLogger('discord')
@@ -26,7 +25,7 @@ logger.addHandler(handler)
 
 
 client = commands.Bot(command_prefix = '>' , intents = intents)
-status = cycle(['Elite : Dangerous'])
+status = cycle(['God' , 'GTAVI'])
 
 print('Loading extensions.....')
 for filename in os.listdir('./cogs'):
