@@ -32,6 +32,7 @@ class Music(commands.Cog):
 				'key': 'FFmpegExtractAudio',
 				'preferredcodec': 'wav',
 				'preferredquality': '320',
+				'default_search': 'auto'
 			}],
 		}
 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
