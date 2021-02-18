@@ -25,7 +25,7 @@ logger.addHandler(handler)
 
 
 client = commands.Bot(command_prefix = '>' , intents = intents)
-status = cycle(['God' , 'GTAVI'])
+status = cycle(['Elite Dangerous : Odyssey' , 'The Bongos'])
 
 print('Loading extensions.....')
 for filename in os.listdir('./cogs'):
@@ -117,7 +117,7 @@ async def unban_error(self , ctx , error):
 
 
 
-@tasks.loop(minutes=10)
+@tasks.loop(minutes=30)
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
