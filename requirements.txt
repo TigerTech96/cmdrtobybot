@@ -14,3 +14,6 @@ yarl==1.6.3
 youtube-dl==2021.2.4.1
 ffmpeg==1.4
 wheel
+google
+beautifulsoup4
+lxml
