@@ -119,7 +119,7 @@ class Memes(commands.Cog):
 				os.rename(file , 'FIREFIGHT.wav')
 		voice.play(discord.FFmpegPCMAudio('FIREFIGHT.wav'))
 		if voice.is_playing():
-			break
+			sleep(1)
 		else:
 			await voice.disconnect()
 
