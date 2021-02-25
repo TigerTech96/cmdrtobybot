@@ -49,8 +49,8 @@ class Memes(commands.Cog):
 			await asyncio.sleep(15) #If it's not playing it waits 15 seconds
 			while voice.is_playing(): #and checks once again if the bot is not playing
 				break #if it's playing it breaks
-		else:
-			await voice.disconnect() #if not it disconnects
+			else:
+				await voice.disconnect() #if not it disconnects
 
 
 
