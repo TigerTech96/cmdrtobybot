@@ -118,10 +118,10 @@ class Memes(commands.Cog):
 			if file.endswith('.wav'):
 				os.rename(file , 'FIREFIGHT.wav')
 		voice.play(discord.FFmpegPCMAudio('FIREFIGHT.wav'))
-		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
-		while voice.is_playing():
-			await sleep (1)
-		await voice.disconnect
+		if voice.is_playing == True:
+			break
+		else:
+			await voice.disconnect()
 
 
 	@commands.command()
@@ -152,11 +152,6 @@ class Memes(commands.Cog):
 			if file.endswith('.wav'):
 				os.rename(file , 'HELL.wav')
 		voice.play(discord.FFmpegPCMAudio('HELL.wav'))
-		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
-		while voice.is_playing():
-			await sleep (1)
-		await voiceChannel.disconnect
-
 
 
 def setup(client):
