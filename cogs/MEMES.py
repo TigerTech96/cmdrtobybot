@@ -43,11 +43,14 @@ class Memes(commands.Cog):
 		voice.play(discord.FFmpegPCMAudio('law.wav'))
 		sleep (10)
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
-		voice.stop()
-		if voice.is_connected():
-			await voice.disconnect()
+		while voice.is_playing(): #Checks if voice is playing
+			await asyncio.sleep(1) #While it's playing it sleeps for 1 second
 		else:
-			await ctx.send('I am not currently connected to a channel')
+			await asyncio.sleep(15) #If it's not playing it waits 15 seconds
+			while voice.is_playing(): #and checks once again if the bot is not playing
+				break #if it's playing it breaks
+		else:
+			await voice.disconnect() #if not it disconnects
 
 
 
