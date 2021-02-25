@@ -51,7 +51,7 @@ class Memes(commands.Cog):
 				break #if it's playing it breaks
 			else:
 				await voice.disconnect() #if not it disconnects
-		@commands.command()
+	@commands.command()
 	async def WHAT(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('WHAT.wav')
