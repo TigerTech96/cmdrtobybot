@@ -17,3 +17,4 @@ wheel
 google
 beautifulsoup4
 lxml
+wikipedia
