@@ -18,3 +18,4 @@ google
 beautifulsoup4
 lxml
 wikipedia
+wikia
