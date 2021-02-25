@@ -42,10 +42,8 @@ class Memes(commands.Cog):
 				os.rename(file , 'law.wav')
 		voice.play(discord.FFmpegPCMAudio('law.wav'))
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
-		sleep (15)
-		voice.stop()
-		if voice.is_connected():
-			await voice.disconnect()
+		sleep (10)
+		await voice.disconnect()
 
 
 def setup(client):
