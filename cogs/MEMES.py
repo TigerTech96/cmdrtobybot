@@ -41,9 +41,14 @@ class Memes(commands.Cog):
 			if file.endswith('.wav'):
 				os.rename(file , 'law.wav')
 		voice.play(discord.FFmpegPCMAudio('law.wav'))
-		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 		sleep (10)
-		await voiceChannel.disconnect()
+		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
+		voice.stop()
+		if voice.is_connected():
+			await voice.disconnect()
+		else:
+			await ctx.send('I am not currently connected to a channel')
+
 
 
 def setup(client):
