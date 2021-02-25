@@ -121,6 +121,7 @@ class Memes(commands.Cog):
 		if voice.is_playing():
 			sleep(1)
 		else:
+			voice.stop()
 			await voice.disconnect()
 
 
