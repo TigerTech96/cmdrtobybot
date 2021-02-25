@@ -19,8 +19,9 @@ class Wiki(commands.Cog):
 	@commands.command()
 	async def wiki(self, ctx, * , question):
 		str (question)
-		print (wikia.summary('Elite Dangerous' , question))
-		await ctx.send (wikia.summary('Elite Dangerous' , question))
+		subject = wiki.page('Elite Dangerous' , question)
+		print (wikia.summary)
+		await ctx.send (wikia.summary)
 
 def setup(client):
 	client.add_cog(Wiki(client))
