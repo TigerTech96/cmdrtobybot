@@ -43,7 +43,7 @@ class Memes(commands.Cog):
 		voice.play(discord.FFmpegPCMAudio('law.wav'))
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 		sleep (10)
-		await voice.disconnect()
+		await voiceChannel.disconnect()
 
 
 def setup(client):
