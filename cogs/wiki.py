@@ -8,6 +8,7 @@ class Wiki(commands.Cog):
 
 	def __init__(self, client):
 		self.client = client
+		print ('Loaded Wikipedia search')
 
 	@commands.command()
 	async def wiki(self, ctx, *, question):
