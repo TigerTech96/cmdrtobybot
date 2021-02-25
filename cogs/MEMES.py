@@ -155,7 +155,7 @@ class Memes(commands.Cog):
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 		while voice.is_playing():
 			await sleep (1)
-		await voice.disconnect
+		await voiceChannel.disconnect
 
 
 
