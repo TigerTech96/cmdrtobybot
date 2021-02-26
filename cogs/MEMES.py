@@ -16,10 +16,10 @@ class Memes(commands.Cog):
 	@commands.command()
 	async def STOP(self, ctx):
 		await ctx.message.delete()
-		song_there = os.path.isfile('law.wav')
+		song_there = os.path.isfile('song.wav')
 		try:
 			if song_there:
-				os.remove('law.wav')
+				os.remove('song.wav')
 		except PermissionError:
 			await ctx.send('Error')
 			return
@@ -39,8 +39,8 @@ class Memes(commands.Cog):
 			ydl.download(['https://www.youtube.com/watch?v=O2otihe65SI'])
 		for file in os.listdir('./'):
 			if file.endswith('.wav'):
-				os.rename(file , 'law.wav')
-		voice.play(discord.FFmpegPCMAudio('law.wav'))
+				os.rename(file , 'song.wav')
+		voice.play(discord.FFmpegPCMAudio('song.wav'))
 		sleep (10)
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 		while voice.is_playing(): #Checks if voice is playing
@@ -54,10 +54,10 @@ class Memes(commands.Cog):
 	@commands.command()
 	async def WHAT(self, ctx):
 		await ctx.message.delete()
-		song_there = os.path.isfile('WHAT.wav')
+		song_there = os.path.isfile('song.wav')
 		try:
 			if song_there:
-				os.remove('WHAT.wav')
+				os.remove('song.wav')
 		except PermissionError:
 			await ctx.send('Error')
 			return
@@ -77,8 +77,8 @@ class Memes(commands.Cog):
 			ydl.download(['https://www.youtube.com/watch?v=W1yM0wVnpFU'])
 		for file in os.listdir('./'):
 			if file.endswith('.wav'):
-				os.rename(file , 'WHAT.wav')
-		voice.play(discord.FFmpegPCMAudio('WHAT.wav'))
+				os.rename(file , 'song.wav')
+		voice.play(discord.FFmpegPCMAudio('song.wav'))
 		sleep (10)
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 		while voice.is_playing(): #Checks if voice is playing
@@ -93,10 +93,10 @@ class Memes(commands.Cog):
 	@commands.command()
 	async def FIREFIGHT(self, ctx):
 		await ctx.message.delete()
-		song_there = os.path.isfile('FIREFIGHT.wav')
+		song_there = os.path.isfile('song.wav')
 		try:
 			if song_there:
-				os.remove('FIREFIGHT.wav')
+				os.remove('song.wav')
 		except PermissionError:
 			await ctx.send('Error')
 			return
@@ -116,8 +116,8 @@ class Memes(commands.Cog):
 			ydl.download(['https://www.youtube.com/watch?v=wcKTbFbwrxE'])
 		for file in os.listdir('./'):
 			if file.endswith('.wav'):
-				os.rename(file , 'FIREFIGHT.wav')
-		voice.play(discord.FFmpegPCMAudio('FIREFIGHT.wav'))
+				os.rename(file , 'song.wav')
+		voice.play(discord.FFmpegPCMAudio('song.wav'))
 		if voice.is_playing():
 			sleep(1)
 		else:
@@ -128,10 +128,10 @@ class Memes(commands.Cog):
 	@commands.command()
 	async def HELL(self, ctx):
 		await ctx.message.delete()
-		song_there = os.path.isfile('HELL.wav')
+		song_there = os.path.isfile('song.wav')
 		try:
 			if song_there:
-				os.remove('HELL.wav')
+				os.remove('song.wav')
 		except PermissionError:
 			await ctx.send('Error')
 			return
@@ -151,8 +151,8 @@ class Memes(commands.Cog):
 			ydl.download(['https://www.youtube.com/watch?v=b29IKW3YrLA'])
 		for file in os.listdir('./'):
 			if file.endswith('.wav'):
-				os.rename(file , 'HELL.wav')
-		voice.play(discord.FFmpegPCMAudio('HELL.wav'))
+				os.rename(file , 'song.wav')
+		voice.play(discord.FFmpegPCMAudio('song.wav'))
 
 
 def setup(client):
