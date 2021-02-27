@@ -115,6 +115,7 @@ class Owner(commands.Cog):
 	@commands.command(hidden=True)
 	async def vexhell(self, ctx):
 		vex = (264643672383946753)
+		print (author)
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
 		try:
