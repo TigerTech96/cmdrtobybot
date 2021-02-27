@@ -144,4 +144,4 @@ class Owner(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(Memes(client))
+	client.add_cog(Owner(client))
