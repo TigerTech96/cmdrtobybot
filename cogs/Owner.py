@@ -114,8 +114,6 @@ class Owner(commands.Cog):
 
 	@commands.command(hidden=True)
 	async def vexhell(self, ctx):
-		vex = ('Vex#4103')
-		print (ctx.message.author)
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
 		try:
@@ -124,6 +122,7 @@ class Owner(commands.Cog):
 		except PermissionError:
 			await ctx.send('Error')
 			return
+		vex = self.client.get_user(264643672383946753)
 		voiceChannel = vex.voice.channel
 		await voiceChannel.connect()
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
