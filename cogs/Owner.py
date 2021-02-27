@@ -6,18 +6,18 @@ import os
 import asyncio
 import time
 
-class Memes(commands.Cog):
+class Owner(commands.Cog):
 
 
 	def __init__(self, client):
 		self.client = client
-		print ('Loaded Memes')
+		print ('Loaded Owner Commands')
 
 
 
 
-	@commands.command()
-	async def STOP(self, ctx):
+	@commands.command(hidden=True)
+	async def vexstop(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
 		try:
@@ -47,8 +47,8 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
-	async def WHAT(self, ctx):
+	@commands.command(hidden=True)
+	async def vexwhat(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
 		try:
@@ -79,8 +79,8 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
-	async def FIREFIGHT(self, ctx):
+	@commands.command(hidden=True)
+	async def vexfirefight(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
 		try:
@@ -112,8 +112,9 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
-	async def HELL(self, ctx):
+	@commands.command(hidden=True)
+	async def vexhell(self, ctx):
+		vex = (264643672383946753)
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
 		try:
@@ -122,7 +123,7 @@ class Memes(commands.Cog):
 		except PermissionError:
 			await ctx.send('Error')
 			return
-		voiceChannel = ctx.message.author.voice.channel
+		voiceChannel = ctx.message.vex.voice.channel
 		await voiceChannel.connect()
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 
