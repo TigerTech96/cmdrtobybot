@@ -123,7 +123,7 @@ class Owner(commands.Cog):
 		except PermissionError:
 			await ctx.send('Error')
 			return
-		voiceChannel = ctx.message.vex.voice.channel
+		voiceChannel = vex.voice.channel
 		await voiceChannel.connect()
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
 
