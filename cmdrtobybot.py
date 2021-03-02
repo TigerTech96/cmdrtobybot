@@ -25,7 +25,7 @@ logger.addHandler(handler)
 
 
 client = commands.Bot(command_prefix = '>' , intents = intents)
-status = cycle(['Elite Dangerous' , 'Jericho'])
+status = cycle(['The Mighty Ducks'])
 
 print('Loading extensions.....')
 for filename in os.listdir('./cogs'):
