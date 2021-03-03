@@ -107,6 +107,8 @@ class Memes(commands.Cog):
 			if file.endswith('.wav'):
 				os.rename(file , 'song.wav')
 		voice.play(discord.FFmpegPCMAudio('song.wav'))
+		voice.stop()
+		await voice.disconnect()
 
 
 
