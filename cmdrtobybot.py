@@ -10,7 +10,7 @@ import logging
 from discord import *
 from discord.ext import commands, tasks
 from itertools import cycle
-from pichart import geese
+geese = os.environ.get('BOT_TOKEN')
 # all stage 1 events are in this file, extensions are where functions are called from
 
 
