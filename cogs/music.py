@@ -40,11 +40,11 @@ class Music(commands.Cog):
 			if file.endswith('.wav'):
 				os.rename(file , 'song.wav')
 		voice.play(discord.FFmpegPCMAudio('song.wav'))
-		if voice.is_playing():
-			sleep(1)
-		else:
-			voice.stop()
-			await voice.disconnect()
+		while voice.is_playing():
+			await asyncio.sleep(1)
+		voice.stop()
+		await voice.disconnect()
+
 			
 
 
