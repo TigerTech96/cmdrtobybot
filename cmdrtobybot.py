@@ -12,7 +12,7 @@ from discord.ext import commands, tasks
 from itertools import cycle
 geese = os.environ.get('BOT_TOKEN')
 # all stage 1 events are in this file, extensions are where functions are called from
-
+#test comment for Xcode pushes to github
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
