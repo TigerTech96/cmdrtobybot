@@ -111,7 +111,7 @@ class Memes(commands.Cog):
             print('sleep1')
 			sleep(1)
             print('aftersleep')
-        print('Should disconnect after this message')
+            print('Should disconnect after this message')
 		voice.stop()
         print('voicestop just ran')
 		await voice.disconnect()
