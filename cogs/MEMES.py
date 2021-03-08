@@ -109,7 +109,6 @@ class Memes(commands.Cog):
 		voice.play(discord.FFmpegPCMAudio('song.wav'))
 		while voice.is_playing():
 			print('sleep1')
-			sleep(1)
 			print('aftersleep')
 			print('Should disconnect after this message')
 		voice.stop()
