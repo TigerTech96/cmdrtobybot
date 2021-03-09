@@ -25,7 +25,7 @@ logger.addHandler(handler)
 
 
 client = commands.Bot(command_prefix = '>' , intents = intents)
-status = cycle(['the guitar'])
+status = cycle(['the guitar', 'the drums'])
 
 print('Loading extensions.....')
 for filename in os.listdir('./cogs'):
