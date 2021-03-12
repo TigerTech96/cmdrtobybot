@@ -12,7 +12,7 @@ class Music(commands.Cog):
 		self.client = client
 		print ('Loaded Music....')
 
-	@commands.command(brief = '>play<url>', description = 'Must use a youtube url : >play<url> without brackets , to stop and set up another song, use the stop command')
+	@commands.command(brief = '>play <url>', description = 'Must use a youtube url : >play <url> without brackets , to stop and set up another song, use the stop command')
 	async def play(self, ctx , url : str):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
