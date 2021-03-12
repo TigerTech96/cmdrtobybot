@@ -12,7 +12,7 @@ class Music(commands.Cog):
 		self.client = client
 		print ('Loaded Music....')
 
-	@commands.command()
+	@commands.command(brief = '>play<url>', description = 'Must use a youtube url : >play<url> without brackets , to stop and set up another song, use the stop command')
 	async def play(self, ctx , url : str):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
@@ -48,7 +48,7 @@ class Music(commands.Cog):
 			
 
 
-	@commands.command()
+	@commands.command(brief = 'Pauses currently playing song from bot', description = 'Pauses currently playing song from bot, will not work if no sound is playing')
 	async def pause(self , ctx):
 		await ctx.message.delete()
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
@@ -58,7 +58,7 @@ class Music(commands.Cog):
 			await ctx.send('No audio is currently playing')
 
 
-	@commands.command()
+	@commands.command(brief = 'Resumes song', description = 'Resumes currently playing song, will not resume if nothing is paused' )
 	async def resume(self , ctx):
 		await ctx.message.delete()
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)
@@ -67,7 +67,7 @@ class Music(commands.Cog):
 		else:
 			await ctx.send('No audio is currently paused')
 
-	@commands.command()
+	@commands.command(brief = 'Stops all sound',description = 'Stops all sound from bot, and disconnects it from the current VC')
 	async def stop(self , ctx):
 		await ctx.message.delete()
 		voice = discord.utils.get(self.client.voice_clients , guild = ctx.guild)

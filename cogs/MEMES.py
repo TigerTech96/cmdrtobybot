@@ -16,7 +16,7 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
+	@commands.command(brief = 'Joins VC and plays a meme')
 	async def STOP(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
@@ -51,7 +51,7 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
+	@commands.command(brief = 'Joins VC and plays a meme')
 	async def WHAT(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
@@ -87,7 +87,7 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
+	@commands.command(brief = 'Joins VC and plays a meme')
 	async def FIREFIGHT(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')
@@ -124,7 +124,7 @@ class Memes(commands.Cog):
 
 
 
-	@commands.command()
+	@commands.command(brief = 'Joins VC and plays a meme')
 	async def HELL(self, ctx):
 		await ctx.message.delete()
 		song_there = os.path.isfile('song.wav')

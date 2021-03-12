@@ -9,7 +9,7 @@ class ChannelControls(commands.Cog):
 		self.client = client
 		print('Loaded Channel Controls....')
 
-	@commands.command()
+	@commands.command(brief = 'Clears messages in a channel' , description = 'Clears specified amount of messages from a channel, also deletes the command message used to call it, so no need to count the command message when specifying a number')
 	@commands.has_permissions(manage_messages=True)
 	async def clear(self, ctx, amount : int):
 		await ctx.message.delete()

@@ -25,7 +25,7 @@ logger.addHandler(handler)
 
 
 client = commands.Bot(command_prefix = '>' , intents = intents)
-status = cycle(['the guitar', 'the drums'])
+status = cycle(['Elite Dangerous'])
 
 print('Loading extensions.....')
 for filename in os.listdir('./cogs'):
@@ -39,7 +39,7 @@ async def on_connect():
 @client.event
 async def on_ready():
     print('Setting status....')
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game('1337Y337'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Elite Dangerous'))
     change_status.start()
     print('-------------------------------')
     print('Welcome: -A.S- CMDR Toby')
@@ -89,11 +89,11 @@ async def on_raw_reaction_add(payload , * role : discord.Role):
 
 
 
-@client.command()
+@client.command(hidden = True)
 async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
 
-@client.command()
+@client.command(hidden = True)
 async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 

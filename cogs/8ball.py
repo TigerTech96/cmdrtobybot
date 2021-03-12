@@ -11,7 +11,7 @@ class Games(commands.Cog):
         print('Loaded Games....')
 
 
-    @commands.command(aliases=['8ball', 'test'])
+    @commands.command(aliases=['8ball', 'test'], brief = 'Answers a question with a yes or no')
     async def fortune(self, ctx, * , question):
 
         responses = [' It is certain.',

@@ -8,7 +8,7 @@ class Diagnostics(commands.Cog):
 	def __init__(self, client):
 		self.client = client
 
-	@commands.command()
+	@commands.command(brief = 'Reports the latency of the bot to the user')
 	async def ping(self, ctx):
 		await ctx.send(f'{round(self.client.latency * 1000)}ms')
 

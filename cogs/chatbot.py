@@ -2,7 +2,7 @@ import discord
 from discord import *
 from discord.ext import commands
 import os
-class ChaTTBot(commands.Cog):
+class ChatBot(commands.Cog):
 
 
 	def __init__(self, client):
@@ -16,4 +16,4 @@ class ChaTTBot(commands.Cog):
 		
 
 def setup(client):
-	client.add_cog(ChaTTBot(client))
+	client.add_cog(ChatBot(client))

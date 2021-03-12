@@ -10,7 +10,7 @@ class Getinfo(commands.Cog):
 		self.client = client
 		print ('Loaded Getinfo....')
 
-	@commands.command()
+	@commands.command(brief = 'Gives the ID of the specified channel')
 	async def getchannel(self , ctx, *, given_name=None):
 		for channel in ctx.guild.channels:
 			if channel.name == given_name:

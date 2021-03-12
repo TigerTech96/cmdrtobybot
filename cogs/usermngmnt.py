@@ -9,7 +9,7 @@ class Usermanagement(commands.Cog):
 		self.client = client
 		print ('Loaded User Management....')
 
-	@commands.command()
+	@commands.command(brief = 'Quick command to have bot kick specified user' , description = '>kick <user> , no identifier is needed unless multiple users share that account name')
 	@commands.has_permissions(kick_members=True)
 	async def kick(self, ctx, member : discord.Member, reason=None):
 		await member.kick(reason=reason)
@@ -21,7 +21,7 @@ class Usermanagement(commands.Cog):
 			await ctx.send ('You do not have permission to do that')
 
 
-	@commands.command()
+	@commands.command(brief = 'Quick command to have bot ban specified user' , description = '>ban <user> , no identifier is needed unless multiple users share that account name')
 	@commands.has_permissions(ban_members=True)
 	async def ban(self, ctx, member : discord.Member, reason=None):
 		await member.ban(reason=reason)
