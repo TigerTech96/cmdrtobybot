@@ -20,7 +20,7 @@ class Wiki(commands.Cog):
 		print (message)
 		try:
 			print ('trying to type summary')
-			print (wikipedia.summary(message))
+			print (wikipedia.summary(message), sentences = 1)
 		except wikipedia.exceptions.DisambiguationError as e:
 			print ('Attempting disambiguation')
 			wikioptions = e.options
