@@ -18,8 +18,6 @@ class Wiki(commands.Cog):
 	async def wiki(self, ctx , message=None):
 		str (message)
 		print (message)
-		suggestion1 = wikipedia.suggest(message)
-		print(suggestion1)
 		try:
 			print ('trying to type summary')
 			await ctx.send (wikipedia.summary(suggestion1))
