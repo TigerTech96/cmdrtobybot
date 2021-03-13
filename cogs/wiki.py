@@ -17,15 +17,7 @@ class Wiki(commands.Cog):
 	#change comment
 	async def wiki(self, ctx , message=None):
 		str (message)
-		print (message)
-		try:
-			print ('trying to type summary')
-			print (wikipedia.summary(message), sentences = 1)
-		except wikipedia.exceptions.DisambiguationError as e:
-			print ('Attempting disambiguation')
-			wikioptions = e.options
-			wikioption = str (wikioptions)
-			await ctx.send ('Did you mean:' + wikioptions)
+		await ctx.send (wikipedia.summary(message), sentences = 1)
 		
 		
 
