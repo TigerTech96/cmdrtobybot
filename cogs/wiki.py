@@ -25,7 +25,7 @@ class Wiki(commands.Cog):
 			await ctx.send (wikipedia.summary(suggestion1))
 			print (wikipedia.summary(suggestion1))
 		except wikipedia.exceptions.DisambiguationError as e:
-		print ('Attempting disambiguation')
+			print ('Attempting disambiguation')
 			wikioptions = e.options
 			wikiotion = str (wikioptions)
 			await ctx.send ('Did you mean:' + wikioptions)
