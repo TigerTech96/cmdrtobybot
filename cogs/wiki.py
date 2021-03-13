@@ -15,10 +15,11 @@ class Wiki(commands.Cog):
 	@commands.command()
 	async def wiki(self, ctx, *, question):
 		str (question)
-		await ctx.send (wikipedia.summary(question))
-		#await ctx.send ('Did you mean?' + wikipedia.suggest(question))
-		#await asyncio.sleep(3)
-		#if 
+		try:
+			await ctx.send (wikipedia.summary(question))
+		except wikipedia.exceptions.DisambiguationError as diswiki:
+			wikioptions = diswiki.options
+			await ctx.send ('Did you mean:' + wikioptions)
 		
 		
 
