@@ -13,6 +13,7 @@ class Wiki(commands.Cog):
 		print ('Loaded Wikipedia search')
 
 	@commands.command()
+	#change comment
 	async def wiki(self, ctx, *, question):
 		str (question)
 		try:
