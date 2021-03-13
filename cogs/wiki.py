@@ -17,7 +17,7 @@ class Wiki(commands.Cog):
 	async def wiki(self, ctx , message=None):
 		str (message)
 		try:
-			await ctx.send (wikipedia.summary(message))
+			await ctx.send (wikipedia.summary(message) , sentences = 5)
 		except wikipedia.exceptions.DisambiguationError as diswiki:
 			wikioptions = diswiki.options
 			await ctx.send ('Did you mean:' + wikioptions)

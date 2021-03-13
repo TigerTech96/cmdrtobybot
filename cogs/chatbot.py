@@ -8,6 +8,12 @@ class ChatBot(commands.Cog):
 	def __init__(self, client):
 		self.client = client
 		print('Loaded Chatbbot....')
+		
+		
+	@commands.command()
+	async def letstalk(self , ctx):
+		await ctx.author.send ('Okay let\'s get personal...')
+		
 
 	@commands.Cog.listener()
 	async def on_message(self, message):
