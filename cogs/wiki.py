@@ -14,10 +14,10 @@ class Wiki(commands.Cog):
 
 	@commands.command()
 	#change comment
-	async def wiki(self, ctx, question):
-		str (question)
+	async def wiki(self, ctx , message=None):
+		str (message)
 		try:
-			await ctx.send (wikipedia.summary(question))
+			await ctx.send (wikipedia.summary(message))
 		except wikipedia.exceptions.DisambiguationError as diswiki:
 			wikioptions = diswiki.options
 			await ctx.send ('Did you mean:' + wikioptions)
