@@ -14,7 +14,7 @@ class Wiki(commands.Cog):
 
 	@commands.command()
 	#change comment
-	async def wiki(self, ctx, *, question):
+	async def wiki(self, ctx, question):
 		str (question)
 		try:
 			await ctx.send (wikipedia.summary(question))
