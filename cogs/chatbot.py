@@ -10,7 +10,7 @@ class ChatBot(commands.Cog):
 		print('Loaded Chatbbot....')
 		
 		
-	@commands.command()
+	@commands.command(brief = 'This is an experimental feature and should not be used' , description = 'Prompts the bot to start a chatbot session with you in a PM')
 	async def letstalk(self , ctx):
 		await ctx.author.send ('Okay let\'s get personal...')
 		
