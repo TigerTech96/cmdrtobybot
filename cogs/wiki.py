@@ -3,7 +3,6 @@ from discord import *
 from discord.ext import commands
 import wikipedia
 import asyncio
-import lxml
 
 
 class Wiki(commands.Cog):
