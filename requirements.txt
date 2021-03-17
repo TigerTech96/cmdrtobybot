@@ -16,7 +16,4 @@ ffmpeg
 wheel
 google
 beautifulsoup4
-lxml
 wikipedia
-wikia
-bs4
