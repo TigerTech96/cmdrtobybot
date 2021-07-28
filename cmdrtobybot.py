@@ -25,7 +25,7 @@ logger.addHandler(handler)
 
 
 client = commands.Bot(command_prefix = '>' , intents = intents)
-status = cycle(['Elite Dangerous'])
+status = cycle(['Minecraft'])
 
 print('Loading extensions.....')
 for filename in os.listdir('./cogs'):
@@ -39,10 +39,10 @@ async def on_connect():
 @client.event
 async def on_ready():
     print('Setting status....')
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Elite Dangerous'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Minecraft'))
     change_status.start()
     print('-------------------------------')
-    print('Welcome: -A.S- CMDR Toby')
+    print('Welcome: Tiger')
     print('-------------------------------')
 
 
@@ -55,17 +55,17 @@ async def on_command_error(ctx , error):
 
 @client.event
 async def on_member_join(member):
-    channel = client.get_channel(799172758545367063)
+    channel = client.get_channel(869982612544962651)
     membersplit = str(member)
     member_name , member_discriminator = membersplit.split('#')
     print(f'{member} has joined the server!')
-    await channel.send(f'Welcome to Astral Squadron CMDR {member_name} o7! Please take a moment to read the rules before asking for a role')
+    await channel.send(f'Welcome to S-VSM{member_name}! Please read the rules and react to continue!')
 
 
 
 @client.event
 async def on_member_remove(member):
-    channel = client.get_channel(808504984177868870)
+    channel = client.get_channel(869760208656810035)
     membersplit = str(member)
     member_name , member_discriminator = membersplit.split('#')
     print(f'{member}has left the server!')
@@ -76,8 +76,8 @@ async def on_member_remove(member):
 
 @client.event
 async def on_raw_reaction_add(payload , * role : discord.Role):
-    if payload.message_id == 801162069977858118:
-        role = (discord.utils.get(payload.member.guild.roles , name = 'Prospect'))
+    if payload.message_id == 869988944752812132:
+        role = (discord.utils.get(payload.member.guild.roles , name = 'Member'))
         await payload.member.add_roles(role)
 
 
