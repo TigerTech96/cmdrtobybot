@@ -55,7 +55,7 @@ async def on_command_error(ctx , error):
 
 @client.event
 async def on_member_join(member):
-    channel = client.get_channel(869982612544962651)
+    channel = client.get_channel(869982255622287361)
     membersplit = str(member)
     member_name , member_discriminator = membersplit.split('#')
     print(f'{member} has joined the server!')
