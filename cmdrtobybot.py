@@ -59,7 +59,7 @@ async def on_member_join(member):
     membersplit = str(member)
     member_name , member_discriminator = membersplit.split('#')
     print(f'{member} has joined the server!')
-    await channel.send(f'Welcome to S-VSM{member_name}! Please read the rules and react to continue!')
+    await channel.send(f'Welcome to S-VSMs Community Discord {member_name}! Please read the rules and react to continue!')
 
 
 
